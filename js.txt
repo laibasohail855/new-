@@ -1,0 +1,47 @@
+let cart = [];
+
+function addToCart(name, price){
+  cart.push({name,price});
+  updateCart();
+  alert(name+" added to cart!");
+}
+
+function removeItem(i){
+  cart.splice(i,1);
+  updateCart();
+}
+
+function updateCart(){
+  let list=document.getElementById("cartItems");
+  let total=0;
+  list.innerHTML="";
+  
+  cart.forEach((item,index)=>{
+    total+=item.price;
+    list.innerHTML+=`<li>${item.name} - £${item.price}
+    <button onclick="removeItem(${index})">Remove</button></li>`;
+  });
+
+  document.getElementById("cartTotal").innerText="Total: £"+total;
+}
+
+document.getElementById("orderForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  let email=document.getElementById("email").value;
+  let pattern=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+  if(!email.match(pattern)){
+    alert("Please enter a valid email!");
+    return;
+  }
+
+  if(cart.length===0){
+    alert("Cart is empty!");
+    return;
+  }
+
+  alert("Order Placed Successfully!");
+  cart=[];
+  updateCart();
+  this.reset();
+});

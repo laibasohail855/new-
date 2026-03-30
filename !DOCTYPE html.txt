@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Cats</title>
+
+<!-- Link CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Cats World 🐱</h1>
+<nav>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#cats">Cats</a></li>
+<li><a href="#catfood">Cat Food</a></li>
+</ul>
+</nav>
+</header>
+
+<!-- CATEGORY SECTION -->
+<div class="container" id="cats">
+<h2>Our Lovely Cat Categories</h2>
+
+<div class="card-box">
+
+<div class="card">
+<a href="#whitecats">
+<img src="pic8.jpg">
+<h3>White Cats</h3>
+</a>
+</div>
+
+<div class="card">
+<a href="#blackcats">
+<img src="pic6.jpg">
+<h3>Black Cats</h3>
+</a>
+</div>
+
+<div class="card">
+<a href="#browncats">
+<img src="pic4.jpg">
+<h3>Brown Cats</h3>
+</a>
+</div>
+
+</div>
+</div>
+
+<!-- WHITE -->
+<section id="whitecats" class="cat-section container">
+<h2>White Cats</h2>
+<div class="card-box">
+<div class="card"><img src="pic8.jpg"><p>White Persian - £500</p><button onclick="addToCart('White Persian',500)">Add to Cart</button></div>
+<div class="card"><img src="picb.jpg"><p>Turkish Angora - £400</p><button onclick="addToCart('Turkish Angora',400)">Add to Cart</button></div>
+<div class="card"><img src="pic1.jpg"><p>White Ragdoll - £550</p><button onclick="addToCart('White Ragdoll',550)">Add to Cart</button></div>
+</div>
+<a href="#cats">⬅ Back</a>
+</section>
+
+<!-- BLACK -->
+<section id="blackcats" class="cat-section container">
+<h2>Black Cats</h2>
+<div class="card-box">
+<div class="card"><img src="pic6.jpg"><p>Bombay - £400</p><button onclick="addToCart('Bombay',400)">Add to Cart</button></div>
+<div class="card"><img src="pic7.jpg"><p>Black British - £350</p><button onclick="addToCart('Black British',350)">Add to Cart</button></div>
+<div class="card"><img src="pic9.jpg"><p>Smoke Persian - £450</p><button onclick="addToCart('Smoke Persian',450)">Add to Cart</button></div>
+</div>
+<a href="#cats">⬅ Back</a>
+</section>
+
+<!-- BROWN -->
+<section id="browncats" class="cat-section container">
+<h2>Brown Cats</h2>
+<div class="card-box">
+<div class="card"><img src="pic4.jpg"><p>Brown Tabby - £700</p><button onclick="addToCart('Brown Tabby',700)">Add to Cart</button></div>
+<div class="card"><img src="pic5.jpg"><p>Hazel Brown - £800</p><button onclick="addToCart('Hazel Brown',800)">Add to Cart</button></div>
+<div class="card"><img src="pica.jpg"><p>Chocolate Maine Coon - £900</p><button onclick="addToCart('Chocolate Maine Coon',900)">Add to Cart</button></div>
+</div>
+<a href="#cats">⬅ Back</a>
+</section>
+
+<!-- FOOD -->
+<div class="container" id="catfood">
+<h2>Cat Food Collection</h2>
+<div class="card-box">
+<div class="card"><img src="cat1.jpeg"><p>Whiskas Fish - £40</p><button onclick="addToCart('Whiskas Fish',40)">Add to Cart</button></div>
+<div class="card"><img src="CAT FOOD_.jpeg"><p>Whiskas Meaty - £39</p><button onclick="addToCart('Whiskas Meaty',39)">Add to Cart</button></div>
+<div class="card"><img src="download (4).jpeg"><p>Whiskas Seafood - £58</p><button onclick="addToCart('Whiskas Seafood',58)">Add to Cart</button></div>
+</div>
+</div>
+
+<!-- CART -->
+<div class="container">
+<h2>Your Cart</h2>
+<ul id="cartItems"></ul>
+<h3 id="cartTotal">Total: £0</h3>
+</div>
+
+<!-- ORDER -->
+<div class="container">
+<h2>Order Details</h2>
+<form id="orderForm">
+<input type="text" required placeholder="Full Name"><br><br>
+<input type="email" id="email" required placeholder="Enter valid email"><br><br>
+<input type="text" required placeholder="Phone Number"><br><br>
+<textarea required placeholder="Complete Address"></textarea><br><br>
+<button type="submit">Place Order</button>
+</form>
+</div>
+
+<footer>
+© 2025 Cat Lovers Hub
+</footer>
+
+<!-- Link JS -->
+<script src="script.js"></script>
+
+</body>
+</html>

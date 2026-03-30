@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: lightyellow;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: #fde2f3;
+  padding: 15px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header h1 {
+  color: deeppink;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  background: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+nav ul li a:hover {
+  background: deeppink;
+  color: white;
+}
+
+.container {
+  margin: 120px auto 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.card-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 220px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+button {
+  background: deeppink;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+button:hover {
+  background: hotpink;
+}
+
+section.cat-section {
+  display: none;
+}
+
+section.cat-section:target {
+  display: block;
+}
+
+input, textarea {
+  width: 80%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+footer {
+  background-color: #fde2f3;
+  text-align: center;
+  padding: 10px;
+}
